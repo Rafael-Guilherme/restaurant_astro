@@ -1,0 +1,27 @@
+---
+interface Props {
+	title: string;
+	price: string;
+	href: string;
+}
+
+const { href, title, price } = Astro.props;
+---
+
+<div class="shadow-lg rounded-3xl mr-6">
+	<img src={href} />
+	<div class="p-4">
+		<p class="text-black text-xl font-bold">{title}</p>
+		<div class="flex items-center justify-between my-2">
+			<p class="text-black">
+				R$ 
+				<span class="text-lg font-semibold">
+					{price}
+				</span>
+			</p>
+			<button class="bg-red-500 w-20 h-11 text-xs font-bold rounded-full">
+				Add to cart
+			</button>
+		</div>
+	</div>
+</div>

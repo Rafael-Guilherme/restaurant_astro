@@ -1,0 +1,52 @@
+---
+import Card from "./Card.astro"
+
+const cardAssets = [
+    {
+        id: 1,
+        image: '/hamburger.png',
+        title: 'Hamburguer',
+        price: '32,00'
+    },
+    {
+        id: 2,
+        image: '/fries_and_hamburger.png',
+        title: 'Combo burguer',
+        price: '42,00'
+    },
+    {
+        id: 3,
+        image: '/pizza.png',
+        title: 'Pizza Margherita',
+        price: '32,00'
+    },
+    {
+        id: 4,
+        image: '/double_burger.png',
+        title: 'Double hamburguer',
+        price: '32,00'
+    },
+    {
+        id: 5,
+        image: '/penne.png',
+        title: 'Penne',
+        price: '26,00'
+    }
+]
+---
+
+<section class="flex flex-col items-center justify-center my-16">
+    <h2 class="text-7xl text-red-500 font-bold mb-1">Our top five meals</h2>
+    <p class="text-3xl text-black font-semibold">Try our five best meals today.</p>
+    <div class="flex mt-10">
+        {cardAssets.map((card) => (
+            <Card  
+                href={card.image}
+                title={card.title}
+                price={card.price}
+            />
+        ))}
+    </div>
+
+    <p class="text-2xl font-semibold text-black mt-8">See more menus</p>
+</section>

@@ -1,0 +1,27 @@
+---
+import logo from "../../public/logo.svg?raw"
+
+const menuList = ['Menu', 'Reservation', 'Blog', 'About us']
+---
+
+<nav class="flex items-center justify-between bg-white text-black py-5 px-24">
+    <a class="cursor-pointer">
+        <Fragment set:html={logo} />
+    </a>
+
+    <div class="flex items-center">
+        <ul class="flex items-center justify-evenly m-0">
+            {menuList.map((item) => (
+                <li class="list-none mr-4">
+                    <a class="cursor-pointer text-lg">
+                        {item}
+                    </a>
+                </li>
+            ))}
+        </ul>
+
+        <button class="bg-red-500 text-white text-sm font-semibold rounded-full w-24 h-9">
+            Order Now
+        </button>
+    </div>
+</nav>

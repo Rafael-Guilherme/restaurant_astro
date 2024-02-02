@@ -1,5 +1,6 @@
 ---
 import Card from "./Card.astro"
+import arrowDown from "../../public/arrow_down.svg?raw"
 
 const cardAssets = [
     {
@@ -23,7 +24,7 @@ const cardAssets = [
     {
         id: 4,
         image: '/double_burger.png',
-        title: 'Double hamburguer',
+        title: 'Duplo hamburguer',
         price: '32,00'
     },
     {
@@ -36,8 +37,8 @@ const cardAssets = [
 ---
 
 <section class="flex flex-col items-center justify-center my-16">
-    <h2 class="text-7xl text-red-500 font-bold mb-1">Our top five meals</h2>
-    <p class="text-3xl text-black font-semibold">Try our five best meals today.</p>
+    <h2 class="text-7xl text-red-500 font-bold mb-1">Nossa principais refeições</h2>
+    <p class="text-3xl text-black font-semibold">Experimente nossas cinco melhores refeições hoje</p>
     <div class="flex mt-10">
         {cardAssets.map((card) => (
             <Card  
@@ -48,5 +49,8 @@ const cardAssets = [
         ))}
     </div>
 
-    <p class="text-2xl font-semibold text-black mt-8">See more menus</p>
+    <p class="text-2xl font-semibold text-black mt-8">Veja mais opções</p>
+    <a class="cursor-pointer mt-2">
+        <Fragment set:html={arrowDown} />
+    </a>
 </section>

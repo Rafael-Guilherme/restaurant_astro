@@ -1,0 +1,128 @@
+---
+const {  } = Astro.props
+---
+
+<div class="bg-red-500 w-full">
+    <div class="p-10 flex items-center justify-center gap-8">
+        <h2 class="text-white font-semibold w-80 text-6xl">Faça sua reserva</h2>
+        <div class="flex items-center bg-white rounded-xl p-2 gap-4">
+            <img src="/calendario.png" class="w-[480px] h-[420px]" />
+            <div class="flex flex-col items-center text-black">
+                <h3 class="font-bold text-2xl mb-4">Preencha o formulário</h3>
+                <div class="flex items-center gap-6 mb-4">
+                    <label
+                        class="flex flex-col"
+                    >
+                        Nome*
+                        <input
+                            required 
+                            type="text"
+                            class="bg-[#EDEDED] placeholder:text-[#999999] rounded-lg pl-2 w-64 h-10"
+                            placeholder="Escreva o seu nome"
+                        />
+                    </label>
+                    <label
+                        class="flex flex-col"
+                    >
+                        Quantidade de pessoas*
+                        <select
+                            required
+                            class="bg-[#EDEDED] placeholder:text-[#999999] rounded-lg pl-2 w-64 h-10"
+                        >
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10+</option>
+                        </select>
+                    </label>
+                </div>
+
+                <div class="flex items-center gap-6 mb-4">
+                    <label
+                        class="flex flex-col"
+                    >
+                        Date*
+                        <input
+                            required 
+                            type="date"
+                            class="bg-[#EDEDED] placeholder:text-[#999999] rounded-lg pl-2 w-64 h-10"
+                            placeholder="DD/MM/YY"
+                        />
+                    </label>
+
+                    <label
+                        class="flex flex-col"
+                    >
+                        Horário*
+                        <select
+                            required
+                            class="bg-[#EDEDED] placeholder:text-[#999999] rounded-lg pl-2 w-64 h-10"
+                        >
+                            <option>18:00</option>
+                            <option>18:30</option>
+                            <option>19:00</option>
+                            <option>19:30</option>
+                            <option>20:00</option>
+                            <option>20:30</option>
+                            <option>21:00</option>
+                            <option>21:30</option>
+                            <option>22:00</option>
+                            <option>22:30</option>
+                        </select>
+                    </label>
+                </div>
+
+                <div class="flex items-center gap-6 mb-4">
+                    <label
+                        class="flex flex-col"
+                    >
+                        Email*
+                        <input
+                            required 
+                            type="text"
+                            class="bg-[#EDEDED] placeholder:text-[#999999] rounded-lg pl-2 w-64 h-10"
+                            placeholder="Escreva o seu email"
+                        />
+                    </label>
+
+                    <label
+                        class="flex flex-col"
+                    >
+                        Celular*
+                        <input
+                            required 
+                            type="text"
+                            class="bg-[#EDEDED] placeholder:text-[#999999] rounded-lg pl-2 w-64 h-10"
+                            placeholder="Escreva o número do seu celular"
+                        />
+                    </label>
+                </div>
+
+                <div class="flex flex-col gap-3 w-full">
+                    <label
+                        class="flex flex-col"
+                    >
+                        Comentários (Opicional)
+                        <textarea
+                            required 
+                            class="bg-[#EDEDED] placeholder:text-[#999999] rounded-lg pl-2 h-32 resize-none"
+                        >
+                        </textarea>
+                    </label>
+
+                    <button
+                        class="bg-red-500 text-white font-medium text-xl rounded-xl h-12 hover:bg-red-800"
+                    >
+                        Agenda sua mesa
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

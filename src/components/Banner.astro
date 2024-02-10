@@ -1,4 +1,6 @@
 ---
+import ReservationPopUp from './ReservationPopUp.astro';
+
 
 ---
 
@@ -9,8 +11,36 @@
         <h1 class="flex flex-col text-8xl font-black leading-[70px] mt-1 mb-4">
             <span>RESERVAS</span>
         </h1>
-        <button class="w-44 h-16 border-4 border-white text-lg font-bold rounded-full">
+        <button id="openDialog" class="w-44 h-16 border-4 border-white text-lg font-bold rounded-full">
             Agende agora! 
         </button>
     </div>
+    <div id="dialog" class="absolute top-16 right-60 z-50 hidden">
+        <button id="closeButton" class="absolute top-3 right-3 text-lg">X</button>
+        <ReservationPopUp closeModal="closeModal" />
+    </div>
 </div>
+
+<script>
+    const popUpDiv = document.querySelector('#openDialog');
+    const dialogPopup = document.querySelector('#dialog');
+    const closeButton = document.querySelector('#closeButton');
+    
+    if (popUpDiv && dialogPopup) {
+        popUpDiv.addEventListener('click', () => {
+            dialogPopup.classList.remove('hidden');
+            dialogPopup.classList.add('block');
+        });
+    }
+    
+    function closeModal() {
+        if(dialogPopup) {
+            dialogPopup.classList.add('hidden');
+            dialogPopup.classList.remove('block');
+        }
+    }
+
+    if (closeButton) {
+        closeButton.addEventListener('click', closeModal)
+    }
+</script>

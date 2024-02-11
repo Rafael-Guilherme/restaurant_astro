@@ -3,90 +3,105 @@
         "id": 1,
         "image": "/hamburger.png",
         "title": "Hamburguer",
-        "price": "32,00"
+        "price": "32,00",
+        "description": "Um clássico hambúrguer feito com carne bovina suculenta, servido no pão com salada, tomate, cebola e molho especial."
     },
     {
         "id": 2,
         "image": "/fries_and_hamburger.png",
         "title": "Combo burguer",
-        "price": "42,00"
+        "price": "42,00",
+        "description": "Este combo inclui um hambúrguer delicioso, acompanhado de fritas crocantes."
     },
     {
         "id": 3,
         "image": "/pizza.png",
         "title": "Pizza Margherita",
-        "price": "32,00"
+        "price": "32,00",
+        "description": "Uma pizza clássica coberta com molho de tomate, mussarela fresca e manjericão."
     },
     {
         "id": 4,
         "image": "/double_burger.png",
         "title": "Duplo hamburguer",
-        "price": "32,00"
+        "price": "60,00",
+        "description": "Dois hambúrgueres de carne bovina suculenta montados no pão com salada, tomate, cebola e molho especial."
     },
     {
         "id": 5,
         "image": "/penne.png",
         "title": "Penne",
-        "price": "26,00"
+        "price": "26,00",
+        "description": "Macarrão penne cozido ao dente, servido com um molho a sua escolha."
     },
     {
         "id": 6,
         "image": "/burguer_molho.png",
         "title": "Hamburguer com molho especial",
-        "price": "36,00"
+        "price": "36,00",
+        "description": "Um hambúrguer saboroso coberto com um molho especial da casa, servido no pão com salada, tomate e cebola."
     },
     {
         "id": 7,
         "image": "/chedar_extra.png",
         "title": "Burguer cheddar extra",
-        "price": "42,00"
+        "price": "42,00",
+        "description": "Hambúrguer de carne bovina coberto com cheddar cremoso derretido, servido no pão com salada, tomate e cebola."
     },
     {
         "id": 8,
         "image": "/combo_junior.png",
         "title": "Combo junior",
-        "price": "28,00"
+        "price": "28,00",
+        "description": "Um combo ideal para crianças, com um hambúrguer menor, fritas e um refrigerante."
     },
     {
         "id": 9,
         "image": "/combo_quarteirao.png",
         "title": "Combo quarteirão",
-        "price": "48,00"
+        "price": "48,00",
+        "description": "Um combo completo para compartilhar, com um hambúrguer grande, fritas, refrigerantes e opcionalmente outros acompanhamentos."
     },
     {
         "id": 10,
         "image": "/dupla_fome.png",
         "title": "Dupla fome",
-        "price": "60,00"
+        "price": "60,00",
+        "description": "Dois hambúrgueres completos acompanhados de uma porção grande de fritas. "
     },
     {
         "id": 11,
         "image": "/duplo_impacto.png",
         "title": "Combo duplo impacto",
-        "price": "55,00"
+        "price": "55,00",
+        "description": "Dois hambúrgueres menores, acompanhados de fritas e refrigerantes."
     },
     {
         "id": 12,
         "image": "/fome_tripla.png",
         "title": "Fome tripla",
-        "price": "89,00"
+        "price": "95,00",
+        "description": "Três hambúrgueres completos, uma porção supersize de fritas e refrigerantes."
     },
     {
         "id": 13,
         "image": "/margherita.png",
         "title": "Pizza margherita especial",
-        "price": "32,00"
+        "price": "32,00",
+        "description": "Uma pizza margherita com ingredientes premium, como mussarela de búfala e tomates frescos selecionados."
     },
     {
         "id": 14,
         "image": "/calabreza.png",
         "title": "Pizza de Calabesa",
-        "price": "32,00"
+        "price": "32,00",
+        "description": "Pizza clássica coberta com molho de tomate, mussarela e calabresa fatiada."
     },
     {
         "id": 15,
         "image": "/portuguesa.png",
         "title": "Portuguesa",
-        "price": "38,00"
+        "price": "38,00",
+        "description": "Pizza coberta com molho de tomate, mussarela, presunto, ovos cozidos, pimentão verde e cebola."
     }
 ]

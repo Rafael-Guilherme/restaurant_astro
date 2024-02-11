@@ -1,0 +1,39 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const message = encodeURIComponent('Olá! Eu vi o seu portfólio ou projeto e gostaria de entrar em contato!')
+---
+
+<Layout title='Sobre'>
+    <main class="flex flex-col items-center justify-center bg-[#F4F5F7] ">
+        <section class="flex flex-col items-center justify-center bg-white w-[560px] h-[480px] my-10 rounded-xl shadow-xl text-black">
+            <h2 class="text-5xl text-red-500 font-bold mb-10">Sobre mim</h2>
+            <div>
+                <h4 class="text-center text-xl">Eu me chamo Rafael de Freitas Guilherme</h4>
+                <h5 class="text-center text-lg">Criei site restaurante em Astro JS.</h5>
+                <div class="mt-5 text-center w-[480px] text-lg">
+                  <p>Eu sou um desenvolvedor web,
+                    atuo como freelancer desde dezembro/2022.
+                    Sempre prezando por fazer um bom trabalho e entregando o melhor dentro dos prazos, metas e objetivos esperados.
+                    Caso queira entrar em contato, pode escolher a melhor forma para você abaixo.
+                  </p>
+                </div>
+            </div>
+            <div class="d-flex align-items-center justify-content-center my-5">
+                <button class="bg-red-500 hover:bg-red-800 w-24 h-10 rounded-lg text-white">
+                    <a href="mailto:rafael_guilherme@hotmail.com" target="_blank">E-mail</a>
+                </button>
+                <button class="bg-red-500 hover:bg-red-800 w-24 h-10 rounded-lg text-white mx-4">
+                    <a href=`https://wa.me/+5521967711607/?text=${message}` target="_blank">Whatsapp</a>
+                </button>
+                <button class="bg-red-500 hover:bg-red-800 w-24 h-10 rounded-lg text-white">
+                    <a href="https://rafaelguilherme.dev" target="_blank">Portfólio</a>
+                </button>
+            </div>
+        </section>
+    </main>
+</Layout>
+
+<script>
+    
+</script>

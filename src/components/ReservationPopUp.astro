@@ -1,10 +1,15 @@
 ---
+interface Props {
+    backgroundColor: string
+    textColor: string
+}
 
+const { backgroundColor, textColor } = Astro.props
 ---
 
-<div class="bg-red-500 w-full">
+<div class={`${backgroundColor} w-full`}>
     <div class="p-10 flex items-center justify-center gap-8">
-        <h2 class="text-white font-semibold w-80 text-6xl">Faça sua reserva</h2>
+        <h2 class={`${textColor} font-semibold w-80 text-6xl`}>Faça sua reserva</h2>
         <div class="flex items-center bg-white rounded-xl p-2 gap-4">
             <img src="/calendario.png" class="w-[480px] h-[420px]" />
             <div class="flex flex-col items-center text-black">

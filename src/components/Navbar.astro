@@ -1,11 +1,17 @@
 ---
 import logo from "../../public/logo.svg?raw"
 
-const menuList = ['home', 'menu', 'reservas', 'sobre']
+const menuList = ['home', 'menu', 'reserva', 'sobre']
+
+const currentPathname = Astro.url.pathname.split("/")[1]
+
 ---
 
 <nav class="flex items-center justify-between bg-white text-black py-5 px-24">
-    <a class="cursor-pointer">
+    <a 
+        href="/"
+        class="cursor-pointer"
+    >
         <Fragment set:html={logo} />
     </a>
 
@@ -13,14 +19,19 @@ const menuList = ['home', 'menu', 'reservas', 'sobre']
         <ul class="flex items-center justify-evenly m-0">
             {menuList.map((item) => (
                 <li class="list-none mr-4">
-                    <a href={item === 'home' ? '/' : `/${item}`} class="cursor-pointer capitalize text-lg">
+                    <a 
+                        href={item === 'home' ? '/' : `/${item}`} 
+                        class={`cursor-pointer capitalize text-lg hover:border-b-2 hover:border-red-500
+                            ${currentPathname  === '' && item === 'home' ? 'border-b-2 border-red-500' : currentPathname  === item ? 'border-b-2 border-red-500' : ''}    
+                        `}
+                    >
                         {item}
                     </a>
                 </li>
             ))}
         </ul>
 
-        <button class="bg-red-500 text-white text-sm font-semibold rounded-full w-36 h-9">
+        <button class="bg-red-500 hover:bg-red-800 text-white text-sm font-semibold rounded-full w-36 h-9">
             Faça o seu pedido
         </button>
     </div>

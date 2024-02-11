@@ -1,56 +1,100 @@
 ---
 import Card from "./Card.astro"
 import arrowDown from "../../public/arrow_down.svg?raw"
+import arrowUp from "../../public/arrow_up.svg?raw"
 
-const cardAssets = [
-    {
-        id: 1,
-        image: '/hamburger.png',
-        title: 'Hamburguer',
-        price: '32,00'
-    },
-    {
-        id: 2,
-        image: '/fries_and_hamburger.png',
-        title: 'Combo burguer',
-        price: '42,00'
-    },
-    {
-        id: 3,
-        image: '/pizza.png',
-        title: 'Pizza Margherita',
-        price: '32,00'
-    },
-    {
-        id: 4,
-        image: '/double_burger.png',
-        title: 'Duplo hamburguer',
-        price: '32,00'
-    },
-    {
-        id: 5,
-        image: '/penne.png',
-        title: 'Penne',
-        price: '26,00'
-    }
-]
+import menu from "../assets/menu.json"
+import complete_menu from "../assets/complete_menu.json"
 ---
 
 <section class="flex flex-col items-center justify-center my-16">
     <h2 class="text-7xl text-red-500 font-bold mb-1">Nossa principais refeições</h2>
     <p class="text-3xl text-black font-semibold">Experimente nossas cinco melhores refeições hoje</p>
-    <div class="flex mt-10">
-        {cardAssets.map((card) => (
-            <Card  
-                href={card.image}
-                title={card.title}
-                price={card.price}
-            />
-        ))}
+        <div id="menu" class="block">
+            <div class="flex mt-10">
+                {menu.map((card) => (
+                    <Card  
+                        href={card.image}
+                        title={card.title}
+                        price={card.price}
+                    />
+                ))}
+            </div>
+        </div>
+    
+        <div id="completeMenu" class="hidden">
+            <div class="grid grid-cols-4 mt-10">
+                {complete_menu.map((menu) => (
+                    <Card  
+                        href={menu.image}
+                        title={menu.title}
+                        price={menu.price}
+                    />
+                ))}
+            </div>
+        </div>
+    
+    <div id="arrowDown" class="block">
+        <div class="flex flex-col items-center">
+            <p class="text-2xl font-semibold text-black mt-8">Veja mais opções</p>
+            <button id="buttonMenu">
+                <a class="cursor-pointer mt-2">
+                    <Fragment set:html={arrowDown} />
+                </a>
+            </button>
+        </div>
     </div>
 
-    <p class="text-2xl font-semibold text-black mt-8">Veja mais opções</p>
-    <a class="cursor-pointer mt-2">
-        <Fragment set:html={arrowDown} />
-    </a>
+    <div id="arrowUp" class="hidden">
+        <div class="flex flex-col items-center">
+            <p class="text-2xl font-semibold text-black mt-8">Veja menos opções</p>
+            <button id="buttonComplete">
+                <a class="cursor-pointer mt-2">
+                    <Fragment set:html={arrowUp} />
+                </a>
+            </button>
+        </div>
+    </div>
 </section>
+
+<script>
+    const menu = document.querySelector('#menu')
+    const completeMenu = document.querySelector('#completeMenu')
+    const buttonMenu = document.querySelector('#buttonMenu')
+    const buttonComplete = document.querySelector('#buttonComplete')
+    const arrowDown = document.querySelector('#arrowDown')
+    const arrowUp = document.querySelector('#arrowUp')
+
+    if (menu && completeMenu && buttonMenu && arrowDown && arrowUp)  {
+        buttonMenu.addEventListener('click', () => {
+            menu.classList.remove('block')
+            menu.classList.add('hidden')
+
+            completeMenu.classList.remove('hidden')
+            completeMenu.classList.add('block')
+
+            arrowDown.classList.remove('block')
+            arrowDown.classList.add('hidden')
+
+            arrowUp.classList.remove('hidden')
+            arrowUp.classList.add('block')
+        })
+    }
+
+    if (menu && completeMenu && buttonComplete && arrowDown && arrowUp)  {
+        buttonComplete.addEventListener('click', () => {
+            menu.classList.remove('hidden')
+            menu.classList.add('block')
+
+            completeMenu.classList.remove('block')
+            completeMenu.classList.add('hidden')
+
+            arrowDown.classList.remove('hidden')
+            arrowDown.classList.add('block')
+
+            arrowUp.classList.remove('block')
+            arrowUp.classList.add('hidden')
+        })
+    }
+
+</script>

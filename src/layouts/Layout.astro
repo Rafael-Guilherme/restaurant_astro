@@ -1,4 +1,7 @@
 ---
+import Footer from '../components/Footer.astro';
+import Navbar from '../components/Navbar.astro';
+
 interface Props {
 	title: string;
 	description?: string
@@ -20,6 +23,8 @@ const { title, description = "Restaurant Page", image = "/images/restaurant.jpg"
 		<title>{title}</title>
 	</head>
 	<body class="min-h-screen bg-[#F4F5F7] text-white">
+		<Navbar />
 		<slot />
+		<Footer />
 	</body>
 </html>

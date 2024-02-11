@@ -1,0 +1,28 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from "../components/Card.astro"
+
+import complete_menu from "../assets/complete_menu.json"
+---
+
+<Layout title='Menu Page'>
+    <main class="flex flex-col items-center justify-center my-16">
+        <h2 class="text-7xl text-red-500 font-bold mb-1">Nosso Menu completo</h2>
+        <p class="text-3xl text-black font-semibold">Veja detalhes de cada prato</p>
+            <div id="completeMenu">
+                <div class="grid grid-cols-5 mt-10">
+                    {complete_menu.map((menu) => (
+                        <Card  
+                            href={menu.image}
+                            title={menu.title}
+                            price={menu.price}
+                        />
+                    ))}
+                </div>
+            </div>
+    </main>
+</Layout>
+
+<script>
+    
+</script>

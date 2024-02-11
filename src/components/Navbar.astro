@@ -1,7 +1,7 @@
 ---
 import logo from "../../public/logo.svg?raw"
 
-const menuList = ['Home', 'Menu', 'Reservas', 'Sobre nós']
+const menuList = ['home', 'menu', 'reservas', 'sobre']
 ---
 
 <nav class="flex items-center justify-between bg-white text-black py-5 px-24">
@@ -13,7 +13,7 @@ const menuList = ['Home', 'Menu', 'Reservas', 'Sobre nós']
         <ul class="flex items-center justify-evenly m-0">
             {menuList.map((item) => (
                 <li class="list-none mr-4">
-                    <a class="cursor-pointer text-lg">
+                    <a href={item === 'home' ? '/' : `/${item}`} class="cursor-pointer capitalize text-lg">
                         {item}
                     </a>
                 </li>

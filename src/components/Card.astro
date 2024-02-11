@@ -3,13 +3,14 @@ interface Props {
 	title: string;
 	price: string;
 	href: string;
+	activeCard: () => void
 }
 
-const { href, title, price } = Astro.props;
+const { href, title, price, activeCard } = Astro.props;
 ---
 
-<div class="shadow-lg rounded-3xl mr-6">
-	<img src={href} />
+<div class="shadow-lg rounded-3xl mr-6 mb-6">
+	<img class="w-full rounded-t-3xl" src={href} />
 	<div class="p-4">
 		<p class="text-black text-xl font-bold">{title}</p>
 		<div class="flex items-center justify-between my-2">
@@ -19,8 +20,8 @@ const { href, title, price } = Astro.props;
 					{price}
 				</span>
 			</p>
-			<button class="bg-red-500 w-20 h-11 text-xs font-bold rounded-full">
-				Adicionar
+			<button onclick={`${activeCard}`} class="bg-red-500 w-24 h-11 text-xs font-bold rounded-full">
+				Ver detalhes
 			</button>
 		</div>
 	</div>

@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "image": "/hamburger.png",
+        "title": "Hamburguer",
+        "price": "32,00"
+    },
+    {
+        "id": 2,
+        "image": "/fries_and_hamburger.png",
+        "title": "Combo burguer",
+        "price": "42,00"
+    },
+    {
+        "id": 3,
+        "image": "/pizza.png",
+        "title": "Pizza Margherita",
+        "price": "32,00"
+    },
+    {
+        "id": 4,
+        "image": "/double_burger.png",
+        "title": "Duplo hamburguer",
+        "price": "32,00"
+    },
+    {
+        "id": 5,
+        "image": "/penne.png",
+        "title": "Penne",
+        "price": "26,00"
+    },
+    {
+        "id": 6,
+        "image": "/burguer_molho.png",
+        "title": "Hamburguer com molho especial",
+        "price": "36,00"
+    },
+    {
+        "id": 7,
+        "image": "/chedar_extra.png",
+        "title": "Burguer cheddar extra",
+        "price": "42,00"
+    },
+    {
+        "id": 8,
+        "image": "/combo_junior.png",
+        "title": "Combo junior",
+        "price": "28,00"
+    },
+    {
+        "id": 9,
+        "image": "/combo_quarteirao.png",
+        "title": "Combo quarteirão",
+        "price": "48,00"
+    },
+    {
+        "id": 10,
+        "image": "/dupla_fome.png",
+        "title": "Dupla fome",
+        "price": "60,00"
+    },
+    {
+        "id": 11,
+        "image": "/duplo_impacto.png",
+        "title": "Combo duplo impacto",
+        "price": "55,00"
+    },
+    {
+        "id": 12,
+        "image": "/fome_tripla.png",
+        "title": "Fome tripla",
+        "price": "89,00"
+    },
+    {
+        "id": 13,
+        "image": "/margherita.png",
+        "title": "Pizza margherita especial",
+        "price": "32,00"
+    },
+    {
+        "id": 14,
+        "image": "/calabreza.png",
+        "title": "Pizza de Calabesa",
+        "price": "32,00"
+    },
+    {
+        "id": 15,
+        "image": "/portuguesa.png",
+        "title": "Portuguesa",
+        "price": "38,00"
+    }
+]
